@@ -2,7 +2,13 @@ plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev'
 }
-
+sourceSets {
+    main {
+        resources {
+            srcDirs += project(':common').file('src/main/generated')
+        }
+    }
+}
 neoForge {
     version = neoforge_version
     // Automatically enable neoforge AccessTransformers if the file exists

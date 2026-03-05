@@ -16,12 +16,14 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-          "net.thenu.pl.ExampleMod"
+          "net.thenu.pl.PL"
+        ],
+        "fabric-datagen": [
+            "net.thenu.datagen.Datagen"
         ]
     },
     "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
+        "pl.fabric.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
